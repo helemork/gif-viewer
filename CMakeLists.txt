@@ -15,7 +15,7 @@ add_definitions("-DROOT_PATH=\"${CMAKE_SOURCE_DIR}/\"")
 
 # Find the QtWidgets library
 find_package(Qt5Widgets CONFIG REQUIRED)
-add_executable(cpp-basics main.cpp)
+add_executable(cpp-basics main.cpp window.hpp window.cpp)
 
 # Use the Widgets module from Qt 5
 target_link_libraries(cpp-basics Qt5::Widgets)
