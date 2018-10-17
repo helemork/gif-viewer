@@ -5,6 +5,7 @@
 #include <QWidget>
 #include <QLabel>
 #include <QListWidget>
+#include <QDir>
 
 class Window :public QWidget{
 	Q_OBJECT
@@ -13,9 +14,11 @@ public:
 	public slots:
 	void selectDirectory();
 	void selectimageFromThumb(QListWidgetItem *item);
+	void nextGif(bool);
+	void backDirectory();
 private:
 	QLabel* imagePlaceHolder;
-	QString root = "D:/GIFS/";
+	QDir root = QDir("D:/GIFS/");
 	QListWidget* thumbdisplayer;
 	void fillThumbViewer();
 
